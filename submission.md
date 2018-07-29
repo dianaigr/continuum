@@ -9,4 +9,4 @@ These notes will be read by Continuum frontend team, feel free to write as much 
 
 ## If there anything else we should know about the submission?
 
-I create a gulp task named deploy. This task I would run it before a full deploy of the project for a production environment to minify the HTML files. I didn't run it before just to be easy to read the document.
+I created a gulp task named deploy. This task I would run it before a full deploy of the project for a production environment to minify the HTML files. I didn't run it before to facilitate the reading of the document.
