@@ -1,0 +1,142 @@
+/*===== VARIABLES =======*/
+$black: #000000;
+$white: #ffffff;
+$blockquote-background: #d2ecf2;
+
+/*===== BREAKPOINTS =======*/
+$breakpoints: ( 'small-mobile': (max-width: 576px), 'mobile': (max-width: 767px), 'tablet': (max-width: 1024px), 'desktop-s': (max-width: 1280px));
+
+@mixin respond-to($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media #{inspect(map-get($breakpoints, $breakpoint))} {
+            @content;
+        }
+    }
+    @else {
+        @error 'No value found for `#{$breakpoint}`. '+'Please make sure it is defined in `$breakpoints` map.';
+    }
+}
+
+/*===== STRUCTURE =======*/
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-size: 62.5%;
+}
+body{
+  position: relative;
+  background: $white;
+  color: $black;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.43;
+  margin: 0;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+.container{
+  position: relative;
+  width: 100%;
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+h1{
+  font-size: 3.6rem;
+  @include respond-to('tablet'){
+    font-size: 3rem;
+  }
+  @include respond-to('small-mobile'){
+    font-size: 2.5rem;
+  }
+}
+
+.blockquote-container{
+  display: block;
+  padding: 20px 40px;
+  background-color: $blockquote-background;
+  display: flex;
+  flex-direction: row;
+  @include respond-to('small-mobile'){
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .blockquote-image{
+    .image{
+      display: block;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-bottom: 20px;
+      @include respond-to('small-mobile'){
+        margin: 0 auto 20px auto;
+      }
+    }
+    img{
+      width: 100%;
+      height: auto;
+    }
+    .name,
+    .job-title{
+      font-size: 1.2rem;
+      display: block;
+      padding-top: 5px;
+    }
+    @include respond-to('small-mobile'){
+      text-align: center;
+    }
+  }
+  .blockquote-text{
+    margin-left: 10%;
+    @include respond-to('small-mobile'){
+      margin-left: 0;
+    }
+    blockquote{
+      margin: 0;
+      padding: 35px 0 20px 0;
+      position: relative;
+      display: block;
+      @include respond-to('small-mobile'){
+        padding: 35px 0;
+      }
+      &:before{
+        content: '';
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background: url('../images/quote-left.svg') no-repeat;
+        background-position: left top;
+        background-size: 22px auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      &:after{
+        content: '';
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        background: url('../images/quote-right.svg') no-repeat;
+        background-position: right bottom;
+        background-size: 22px auto;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+      p{
+        margin: 0;
+      }
+    }
+  }
+}

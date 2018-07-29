@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Exercise Two</title>
+    <meta id="viewport" name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- ===  Load Stylesheets resources ===-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body>
+    <!-- ===  Main header ===-->
+    <header class="header">
+      <!-- ===  Top bar ===-->
+      <div class="top-bar">
+        <div class="container">
+          <div class="row">
+          <div class="col d-md-flex justify-content-between align-items-center">
+            <div class="contact-info">
+              <a href="tel:+3538858860" class="phone"><i class="fas fa-phone"></i>Call us: +353 885 8860</a>
+              <a href="mailto:info@wearecontinuum.com" class="email"><i class="fas fa-envelope"></i>info@wearecontinuum.com</a>
+            </div>
+            <div class="d-sm-flex align-items-center">
+              <span class="contact-label">CONTACT US</span>
+              <form>
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="" aria-label="Search" aria-describedby="button-addon2">
+                  <div class="input-group-append">
+                    <button class="btn" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <!-- === Header navigation  ===-->
+      <div class="main-header">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <div class="container">
+
+            <a class="navbar-brand" href="#">
+              <img src="assets/images/logo_continuum.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar" aria-controls="collapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="collapsingNavbar">
+              <ul class="nav navbar-nav ml-auto justify-content-end">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">What we do</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Case studies</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Momentum</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Masterclass</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <div class="container-fluid">
+        <section>
+          <!-- ===  Main slider ===-->
+          <div class="row slider">
+            <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+            <div class="slider-homepage">
+              <div>
+                <img src="assets/images/dublin1.jpg" alt="">
+                <div class="caption">
+                  <h2>Digital Transformation Agency</h2>
+                  <div class="lead">We are full-service digital agency based in Dublin offering digital transformation, web design and web development.</div>
+                </div>
+              </div>
+              <div>
+                <img src="assets/images/dublin1.jpg" alt="">
+                <div class="caption">
+                  <h2>Digital Transformation Agency</h2>
+                  <div class="lead">We are full-service digital agency based in Dublin offering digital transformation, web design and web development.</div>
+                </div>
+              </div>
+              <div>
+                <img src="assets/images/dublin2.jpg" alt="">
+                <div class="caption">
+                  <h2>Digital Transformation Agency</h2>
+                  <div class="lead">We are full-service digital agency based in Dublin offering digital transformation, web design and web development.</div>
+                </div>
+              </div>
+            </div>
+            <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
+          </div>
+        </section>
+    </div>
+
+    <!-- ===  Load Javascript resources ===-->
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="assets/js/slick.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+        /***  ===  Slider Init ===  ***/
+        $('.slider-homepage').slick({
+          nextArrow: $('.slider-next'),
+          prevArrow: $('.slider-prev')
+        });
+      });
+    </script>
+
+  </body>
+</html>
