@@ -25,9 +25,9 @@
         minutes = Math.floor((diference % (hour)) / (minute));
 
     // Update values of days, hours and minutes on markup
-    document.getElementById('days').innerText = String(days).length >= 2 ? days : `0${days}`,
-    document.getElementById('hours').innerText = String(hours).length >= 2 ? hours : `0${hours}`,
-    document.getElementById('minutes').innerText = String(minutes).length >= 2 ? minutes : `0${minutes}`;
+    document.getElementById('days').innerText = String(days).length >= 2 ? days : "0" + days,
+    document.getElementById('hours').innerText = String(hours).length >= 2 ? hours : "0" + hours,
+    document.getElementById('minutes').innerText = String(minutes).length >= 2 ? minutes : "0" + minutes;
 
     // Condition to validate if the countDown ends
     if(diference < 0){
